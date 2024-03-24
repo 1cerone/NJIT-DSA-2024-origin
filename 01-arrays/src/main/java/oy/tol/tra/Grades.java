@@ -52,16 +52,39 @@ public class Grades {
        5. Fix the issue.
        6. Transform the algorithm to <strong>use</strong> the generic one from Algorithms.java as instructed in the readme file.
       */
-      int i = grades.length-1;
-      while (i > 0) {
-         if (grades[i] < grades[i-1]) {
-            int tmp = grades[i];
-            grades[i] = grades[i-1];
-            grades[i-1] = tmp;
-         }
-         i--;
+
+      
+
+
+
+
+
+
+for (int i = 0; i < grades.length; i++) {
+   for (int j = i + 1; j < grades.length; j++) {
+      if (grades[i] > grades[j]) {
+         int temp = grades[i];
+         grades[i] = grades[j];
+         grades[j] = temp;
       }
    }
+}
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    /**
     * Returns the plain Java int [] array for investigation.
@@ -70,4 +93,6 @@ public class Grades {
    public Integer [] getArray() {
       return grades;
    }
+
 }
+
