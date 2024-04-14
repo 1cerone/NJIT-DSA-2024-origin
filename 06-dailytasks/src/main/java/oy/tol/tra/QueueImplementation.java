@@ -28,6 +28,10 @@ public class QueueImplementation<E> implements QueueInterface<E> {
         }
     }
 
+    @Override
+    public int capacity() {
+        return capacity;
+    }
 
     @Override
     public void enqueue(E element) throws QueueAllocationException, NullPointerException {
@@ -58,12 +62,7 @@ public class QueueImplementation<E> implements QueueInterface<E> {
         itemArray[rear] = element;
         size++;
     }
-    
-    
-    @Override
-    public int capacity() {
-        return capacity;
-    }
+
     @SuppressWarnings("unchecked")
     @Override
     public E dequeue() throws QueueIsEmptyException {
